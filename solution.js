@@ -2,41 +2,49 @@ const { nums, words } = require("./data/data.js");
 
 // Every
 const isEveryNumGreaterThan2 = (nums) => {
-  return nums.every((num) => num >= 2)
+  const GreaterThan2 = nums.every((num) => num >= 2)
+  return GreaterThan2
 };
 
 const isEveryWordShorterThan7 = (words) => {
-  return words.every((word) => word.length < 7)
+  const WordShorterThan7 = words.every((word) => word.length < 7)
+  return WordShorterThan7
 };
 
 // Filter
 
 const arrayLessThan5 = (nums) => {
-  return nums.filter((num) => num < 5)
+  const LessThan5 = nums.filter((num) => num < 5)
+  return LessThan5
 };
 
 const arrayOddLengthWords = (words) => {
-  return words.filter((word) => word.length % 2 === 1)
+  const OddLengthWords = words.filter((word) => word.length % 2 === 1)
+  return OddLengthWords
 };
 
 // Find
 
 const firstValDivisibleBy4 = (nums) => {
-  return nums.find((num) => num % 4 === 0)
+  const ValDivisibleBy4 = nums.find((num) => num % 4 === 0)
+  return ValDivisibleBy4
 };
 
 const firstWordLongerThan4Char = (words) => {
-  return words.find((word) => word.length > 4)
+  const LongerThan4Char = words.find((word) => word.length > 4)
+  return LongerThan4Char
 };
 
 // Find Index
 
 const firstNumIndexDivisibleBy3 = (nums) => {
-  return nums.findIndex((num) => num % 3 === 0)
+  const DivisibleBy3 = nums.findIndex((num) => num % 3 === 0)
+  return DivisibleBy3
 };
 
 const firstWordIndexLessThan2Char = (words) => {
-  return words.findIndex((word) => word.length < 2)
+  const LessThan2Char = words.findIndex((word) => word.length < 2)
+  return LessThan2Char
 };
 
 // For Each
@@ -54,21 +62,25 @@ const logWordsWithExclamation = (words) => {
 // Map
 
 const arrayValuesSquaredTimesIndex = (nums) => {
-  return nums.map((num, index) => num * num * index)
+  const TimesIndex = nums.map((num, index) => num * num * index)
+  return TimesIndex
 };
 
 const arrayWordsUpcased = (words) => {
-  return words.map((word) => word.toUpperCase())
+  const WordsUpcased = words.map((word) => word.toUpperCase())
+  return WordsUpcased
 };
 
 // Some
 
 const areSomeNumsDivisibleBy7 = (nums) => {
-  return nums.some((num) => num % 7 === 0)
+  const DivisibleBy7 = nums.some((num) => num % 7 === 0)
+  return DivisibleBy7
 };
 
 const doSomeWordsHaveAnA = (words) => {
-  return words.some((word) => word.includes("a"))
+  const WordsHaveAnA = words.some((word) => word.includes("a"))
+  return WordsHaveAnA
 };
 
 module.exports = {
