@@ -67,39 +67,34 @@ const firstWordIndexLessThan2Char = (words) => {
 
 // For Each
 
-const logValuesTimes3 = () => {
-  const numsArr = (curr) => curr * 3;
-  return nums.forEach(numsArr)
+const logValuesTimes3 = (nums) => {
+  nums.forEach(num => console.log(num * 3));
 };
 
-const logWordsWithExclamation = () => {
-  const wordWithExclamation = (curr) => curr.length + '!';
-  return words.forEach(wordWithExclamation)
+const logWordsWithExclamation = (words) => {
+  words.forEach(word => console.log(word.length + '!'));
 };
 
 // Map
 
-const arrayValuesSquaredTimesIndex = () => {
-  const newArr = (curr, i) => (curr * curr) * i;
-  return nums.map(newArr)
+const arrayValuesSquaredTimesIndex = (nums) => {
+  return nums.map((curr, i) => curr * curr * i);
 };
 
-const arrayWordsUpcased = () => {
-  const upperCaseArr = (curr) => curr.toUpperCase();
-  return words.map(upperCaseArr)
+const arrayWordsUpcased = (words) => {
+  return words.map(curr => curr.toUpperCase());
 };
 
 // Some
 
-const areSomeNumsDivisibleBy7 = () => {
-  const isItDivisible = (curr) => curr % 7 === 0;
-  return nums.some(isItDivisible)
+const areSomeNumsDivisibleBy7 = (nums) => {
+  return nums.some(curr => curr % 7 === 0);
 };
 
-const doSomeWordsHaveAnA = () => {
-  const wordWithA = (curr) => curr.includes('a');;
-  return words.some(wordWithA)
+const doSomeWordsHaveAnA = (words) => {
+  return words.some(curr => curr.includes('a'));
 };
+
 
 module.exports = {
   isEveryNumGreaterThan2,
