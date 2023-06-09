@@ -31,8 +31,8 @@ const firstWordLongerThan4Char = (words) => {
 
 // Find Index
 
-const firstNumIndexDivisibleBy3 = () => {
-  //
+const firstNumIndexDivisibleBy3 = (nums) => {
+  return nums.findIndex((num) => num % 3 === 0)
 };
 
 const firstWordIndexLessThan2Char = () => {
