@@ -25,8 +25,8 @@ const firstValDivisibleBy4 = (nums) => {
   return nums.find((num) => num % 4 === 0)
 };
 
-const firstWordLongerThan4Char = () => {
-  //
+const firstWordLongerThan4Char = (words) => {
+  return words.find((word) => word.length > 4)
 };
 
 // Find Index
