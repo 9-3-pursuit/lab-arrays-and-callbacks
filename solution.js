@@ -41,8 +41,9 @@ const firstWordIndexLessThan2Char = (words) => {
 
 // For Each
 
-const logValuesTimes3 = () => {
-  //
+const logValuesTimes3 = (nums) => {
+  const product = nums.forEach((num) => num * 3)
+  console.log(product)
 };
 
 const logWordsWithExclamation = () => {
