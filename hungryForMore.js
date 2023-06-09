@@ -73,6 +73,7 @@ const addAllNumbers = nums.reduce((arr, curr) => {
   }
   console.log("Is Every Letter There?:", everyLetterSort);
   
+  // * Products Array W/ Corresponding Functions --v
   const products = [
     {
       name: "fairy lights",
