@@ -11,8 +11,8 @@ const isEveryWordShorterThan7 = (words) => {
 
 // Filter
 
-const arrayLessThan5 = () => {
-  //
+const arrayLessThan5 = (nums) => {
+  return nums.filter((num) => num < 5)
 };
 
 const arrayOddLengthWords = () => {
