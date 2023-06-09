@@ -1,5 +1,6 @@
 const { nums, words } = require("./data/data.js");
 
+
 // Every
 const isEveryNumGreaterThan2 = (nums) => {
   return nums.every((num) => num >= 2);
@@ -87,6 +88,51 @@ const doSomeWordsHaveAnA = (words) => {
     return word !== "a";
   });
 };
+
+// Hungry For More - Challenges --v
+
+// * reduce
+// nums - Add all the numbers in the array together using the reduce method
+// returns array step by step modified
+const addAllNumbers = nums.reduce((arr, curr) => {
+  console.log("acc:", arr, "curr:", curr);
+  arr.push(curr);
+  return arr;
+}, []);
+
+// alternative syntax -- works as well, but returns one line
+// const addAllNumbers = (nums) => {
+//   return nums.reduce((a, b) => a + b, 0);
+// };
+// console.log(nums);
+
+// words - concatenate all the words using reduce
+// returns array step by step modified
+const concatenateAllWords = words.reduce((arr, curr) => {
+  console.log("acc:", arr, "curr:", curr);
+  arr.push(curr)
+  return arr ;
+}, []);
+
+// alternate syntax - returns the word array as one line
+// const concatenateAllWords = (words) => {
+//   return words.reduce((a, b) => a + b);
+// };
+// console.log(words);
+
+// * sort
+
+//  test whether each letter a-z (case insensitive) is used at least once
+
+
+
+
+
+// * Working with data
+// filter for products with a price that is less than 10, using the array below:
+// sort alphabetically by product name
+
+
 
 module.exports = {
   isEveryNumGreaterThan2,
