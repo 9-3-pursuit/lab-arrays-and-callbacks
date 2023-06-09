@@ -57,8 +57,8 @@ const arrayValuesSquaredTimesIndex = (nums) => {
   return nums.map((num, index) => num * num * index)
 };
 
-const arrayWordsUpcased = () => {
-  //
+const arrayWordsUpcased = (words) => {
+  return words.map((word) => word.toUpperCase())
 };
 
 // Some
