@@ -1,5 +1,4 @@
-const { nums, words } = require("./data/data.js");
-
+const { nums, words, products } = require("./data/data.js");
 
 // Every
 const isEveryNumGreaterThan2 = (nums) => {
@@ -89,7 +88,7 @@ const doSomeWordsHaveAnA = (words) => {
   });
 };
 
-// Hungry For More - Challenges --v
+// ** Hungry For More - Challenges --v
 
 // * reduce
 // nums - Add all the numbers in the array together using the reduce method
@@ -99,40 +98,96 @@ const addAllNumbers = nums.reduce((arr, curr) => {
   arr.push(curr);
   return arr;
 }, []);
-
-// alternative syntax -- works as well, but returns one line
-// const addAllNumbers = (nums) => {
-//   return nums.reduce((a, b) => a + b, 0);
-// };
-// console.log(nums);
+console.log("Adding All Numbers:", addAllNumbers);
 
 // words - concatenate all the words using reduce
 // returns array step by step modified
 const concatenateAllWords = words.reduce((arr, curr) => {
   console.log("acc:", arr, "curr:", curr);
-  arr.push(curr)
-  return arr ;
+  arr.push(curr);
+  return arr;
 }, []);
-
-// alternate syntax - returns the word array as one line
-// const concatenateAllWords = (words) => {
-//   return words.reduce((a, b) => a + b);
-// };
-// console.log(words);
+console.log("Concatenante All Words:",concatenateAllWords);
 
 // * sort
 
-//  test whether each letter a-z (case insensitive) is used at least once
+// sort without any arguments - number array
+const emptySortNums = (nums) => {
+  return nums.sort();
+};
+console.log("No Number Arguement:", emptySortNums);
 
+// sort without any arguments - word array
+const emptySortWords = (words) => {
+  return words.sort();
+};
+console.log("No Word Argument:", emptySortWords);
 
+// Sort the numbers in ascending order
+const ascendingOrderNum = nums.sort((a, b) => {
+  return a > b ? 1 : 1;
+});
+console.log("Ascending Numbers:", ascendingOrderNum);
+// Sort the numbers in descending order
+const descendingOrderNum = nums.sort((a, b) => {
+  return b > a ? 1 : -1;
+});
+console.log("Descending Numbers:", descendingOrderNum);
 
+// Sort the words in ascending order
+const ascendingOrderWords = words.sort((a, b) => {
+  return a > b ? 1 : 1;
+});
+console.log("Ascending Words:", ascendingOrderWords);
 
+// Sort the words in descending order
+const descendingOrderWords = words.sort((a, b) => {
+  return b > a ? 1 : -1;
+});
+console.log("Descending Words:", descendingOrderWords);
+
+// test whether each letter a-z (case insensitive) is used at least once
+function everyLetterSort(a, b) {
+  let aLowerCase = a.toLowerCase();
+  let bLowerCase = b.toLowerCase();
+
+  if (aLowerCase < bLowerCase) {
+    return -1;
+  } else if (aLowerCase > bLowerCase) {
+    return 1;
+  } else {
+    return 0; // this will return you back to the orignal value of array b/c all other conditions are met
+  }
+}
+console.log("Is Every Letter There?:", everyLetterSort);
 
 // * Working with data
+
+// * filter
 // filter for products with a price that is less than 10, using the array below:
+const filterPrice = products.filter((product) => {
+  return product.price < 10;
+});
+console.log("Product Filtered By Price:", filterPrice);
+
+// * sort
 // sort alphabetically by product name
 
+// const emptySortWords = (words) => {
+//   return words.sort();
+// };
 
+const sortProductNames = products.sort((a, b) => {
+  if (b.name > a.name) {
+    return -1;
+  } else if (a.name > b.name) {
+    return 1;
+  } else {
+    return 0;
+  }
+});
+
+console.log("Product Name Sort:", sortProductNames);
 
 module.exports = {
   isEveryNumGreaterThan2,
