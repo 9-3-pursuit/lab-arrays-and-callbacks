@@ -2,68 +2,75 @@ const { nums, words } = require("./data/data.js");
 
 // Every
 const isEveryNumGreaterThan2 = (nums) => {
-  return nums.every(num => num >= 2)
+  return nums.every((num) => num >= 2);
 };
 
 const isEveryWordShorterThan7 = (words) => {
-  return words.every(word => word.length < 7)
+  return words.every((word) => word.length < 7);
 };
 
 // Filter
 
 const arrayLessThan5 = (nums) => {
-  return nums.filter(num => num < 5 ) 
+  return nums.filter((num) => num < 5);
 };
 
 const arrayOddLengthWords = (words) => {
-  return words.filter(word => word.length % 2 !== 0)
+  return words.filter((word) => word.length % 2 !== 0);
 };
 
 // Find
 
 const firstValDivisibleBy4 = (nums) => {
-return nums.find(num => num % 4 === 0)
+  return nums.find((num) => num % 4 === 0);
 };
 
 const firstWordLongerThan4Char = (words) => {
-  return words.find(word => word.length > 4)
+  return words.find((word) => word.length > 4);
 };
 
 // Find Index
 
 const firstNumIndexDivisibleBy3 = (nums) => {
-return nums.findIndex(num => num % 3 === 0)
-
-
+  return nums.findIndex((num) => num % 3 === 0);
 };
 
 const firstWordIndexLessThan2Char = (words) => {
- return words.findIndex(word => word.length < 2)
+  return words.findIndex((word) => word.length < 2);
 };
 
 // For Each
 
 const logValuesTimes3 = (nums) => {
-return nums.forEach((num)=> {
-  num * 3
-})
-  
+  return nums.forEach((num) => {
+    num * 3;
+  });
 };
 
 const logWordsWithExclamation = (words) => {
-return words.forEach((word)=>{
-  word === "!"
-})
+  return words.forEach((word) => {
+    word === "!";
+  });
 };
 
 // Map
 
-const arrayValuesSquaredTimesIndex = () => {
-  //
+const arrayValuesSquaredTimesIndex = (nums) => {
+  return nums.map(
+    (num, index) =>
+      // ** either way works -- ! must have an index NOT multiple it by 2
+      // * Math.pow() squares the number for you
+      //  Math.pow(num, 2) * index
+
+      // * useage of the Exponenetion Operator
+      num ** 2 * index
+  );
 };
 
-const arrayWordsUpcased = () => {
-  //
+const arrayWordsUpcased = (words) => {
+  return words.map((word) => {
+   return word.toUpperCase();
+  });
 };
 
 // Some
