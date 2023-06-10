@@ -73,8 +73,8 @@ You don't have to write an answer to the thought questions.
 
 **Thought Questions**
 
-- What happened to the original array?
-- Can you store the values from a `forEach` method in a new array?
+- What happened to the original array? The original still exists and was not mutated. 
+- Can you store the values from a `forEach` method in a new array? yes
 
 #### Map
 
@@ -83,8 +83,9 @@ You don't have to write an answer to the thought questions.
 
 **Thought Questions**
 
-- What happened to the original array?
+- What happened to the original array?The original still existsa and hs not been mutated.
 - Can you store the values from a `map` method in a new array?
+Yes.
 
 #### Some
 
