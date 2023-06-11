@@ -180,6 +180,22 @@ const sortWordsWithoutArguments = () => {
 
 // sortWordsWithoutArguments();
 
+
+
+const filteredProductsByPriceAndSortedByName = () => {
+  let result = []
+    products.filter((product) => {
+    if (product.price < 10){
+      result.sort().push(product.name)
+      // result.sort()
+      
+    }
+  })
+    console.log(result)
+    return result;
+  }
+  //filteredProductsByPriceAndSortedByName()
+
 module.exports = {
   isEveryNumGreaterThan2,
   isEveryWordShorterThan7,
@@ -199,5 +215,8 @@ module.exports = {
   concatenateWordsUsingReduce,
   sortNumsWithArguments,
   sortNumsWithoutArguments,
-  sortWordsWithoutArguments
+  sortWordsWithoutArguments,
+  filteredProductsByPriceAndSortedByName
 };
+
+
