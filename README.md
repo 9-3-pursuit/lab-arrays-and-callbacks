@@ -101,12 +101,12 @@ Yes.
 
 **Thought Questions**
 
-- What happened to the original array?
+- What happened to the original array? The original array stil exists in memory. We are only returning the sum or culmination of adding or concatening the values in the array.
 
 #### Sort
 
-- Try to sort without any arguments, do you get what you'd expect with the numbers array?
-- Try to sort without any arguments, do you get what you'd expect with the words array?
+- Try to sort without any arguments, do you get what you'd expect with the numbers array?Y Yes 
+- Try to sort without any arguments, do you get what you'd expect with the words array? No. 
 - Sort the numbers in ascending order
 - Sort the numbers in descending order
 - Sort the words in ascending order
@@ -114,7 +114,7 @@ Yes.
 
 **Thought Questions**
 
-- What happened to the original array?
+- What happened to the original array? The original array is overwritten by the sort methed. source: w3schools
 
 ### Array Methods Challenge Problems
 

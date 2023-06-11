@@ -131,6 +131,55 @@ const doSomeWordsHaveAnA = () => {
   return result;
 };
 
+// Reduce
+
+const addNumsUsingReduce = () => {
+  let result = nums.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  console.log(result);
+
+  return result;
+};
+
+const concatenateWordsUsingReduce = () => {
+  let result = words.reduce(
+    (accumulator, currentValue) => accumulator + currentValue
+  );
+  return result;
+};
+
+const sortNumsWithArguments = () => {
+  let result = nums.sort((a, b) => {
+    return b - a;
+  });
+  console.log(result);
+  return result;
+};
+// sortNumsWithArguments();
+//sortNumsWithArguments produces the xpected and intended results for sorting in ascending and descending order.
+
+const sortNumsWithoutArguments = () => {
+  let result = nums.sort(() => {
+    console.log(result);
+    return result;
+  });
+  // console.log(result)
+  // return result
+};
+// sortNumsWithoutArguments();
+//sortNumsWithoutArguments produces the expected result because the sort function requires arguments with instructions on the particular sequence that the programmer intends to sort the data.
+
+const sortWordsWithoutArguments = () => {
+  words.sort(); //sorts in ascending order
+  words.sort().reverse() // sorts in descending order
+  words.reverse() // sorts in descending order
+};
+
+// The one issue here is that one of the strings is statrs with a capital case Letter and in ascending order that string is sorted in the first position of the array. If we can make all strings the same case in the array then the sort method will work the way would expect.
+
+// sortWordsWithoutArguments();
+
 module.exports = {
   isEveryNumGreaterThan2,
   isEveryWordShorterThan7,
@@ -146,4 +195,9 @@ module.exports = {
   arrayWordsUpcased,
   areSomeNumsDivisibleBy7,
   doSomeWordsHaveAnA,
+  addNumsUsingReduce,
+  concatenateWordsUsingReduce,
+  sortNumsWithArguments,
+  sortNumsWithoutArguments,
+  sortWordsWithoutArguments
 };
