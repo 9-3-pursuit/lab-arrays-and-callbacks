@@ -74,27 +74,27 @@ const logValuesTimes3 = (nums) => {
 
 const logWordsWithExclamation = (words) => {
   words.forEach(word =>
-    console.log(word.length + '!'));
+    console.log(word + '!'));
 };
 
 // Map
 
 const arrayValuesSquaredTimesIndex = (nums) => {
-  return nums.map((curr, i) => curr * curr * i);
+  return nums.map((num, i) => num * num * i);
 };
 
 const arrayWordsUpcased = (words) => {
-  return words.map(curr => curr.toUpperCase());
+  return words.map(word => word.toUpperCase());
 };
 
 // Some
 
 const areSomeNumsDivisibleBy7 = (nums) => {
-  return nums.some(curr => curr % 7 === 0);
+  return nums.some(num => num % 7 === 0);
 };
 
 const doSomeWordsHaveAnA = (words) => {
-  return words.some(curr => curr.includes('a'));
+  return words.some(word => word.includes('a'));
 };
 
 
