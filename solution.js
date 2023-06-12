@@ -64,7 +64,7 @@ const logValuesTimes3 = () => {
 };
 
 const logWordsWithExclamation = () => {
-  const wordEx = (curr) => curr.length + `!`;
+  const wordEx = (curr) => curr + `!`;
   return words.forEach(wordEx)
   //
 };
