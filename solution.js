@@ -83,7 +83,7 @@ const logWordsWithExclamation = (words) => {
 
 const arrayValuesSquaredTimesIndex = (nums) => {
   const result = nums.map((num, i) => {
-    return (num * num) * num[i];
+    return (num ** 2) * i;
   })
   return result;
 };
@@ -106,7 +106,7 @@ const areSomeNumsDivisibleBy7 = (nums) => {
 
 const doSomeWordsHaveAnA = (words) => {
   const result = words.some(word => {
-    return word.include('a')
+    return word.includes("a") || word.includes("A")
   })
   return result;
    //
