@@ -17,6 +17,7 @@ const arrayLessThan5 = (nums) => {
   return nums.filter(num => num < 5)
 };
 
+
 const arrayOddLengthWords = (words) => {
   return words.filter(word => word.length % 2 === 1 ) 
 };
@@ -44,31 +45,31 @@ const firstWordIndexLessThan2Char = (words) => {
 // For Each
 
 const logValuesTimes3 = (nums) => {
-  return nums.Each (num => num * 3)
+  return nums.forEach( x => console.log(x*3))
 };
 
-const logWordsWithExclamation = () => {
-  //
+const logWordsWithExclamation = (words) => {
+  return words.forEach( w => console.log(`${w}!`))
 };
 
 // Map
 
-const arrayValuesSquaredTimesIndex = () => {
-  //
+const arrayValuesSquaredTimesIndex = (nums) => {
+  return nums.map( (num,i) =>  (num**2)*i)
 };
 
-const arrayWordsUpcased = () => {
-  //
+const arrayWordsUpcased = (words) => {
+  return words.map( word => word.toUpperCase())
 };
 
 // Some
 
-const areSomeNumsDivisibleBy7 = () => {
-  //
+const areSomeNumsDivisibleBy7 = (nums) => {
+  return nums.some( x => x % 7 === 0)
 };
 
-const doSomeWordsHaveAnA = () => {
-  //
+const doSomeWordsHaveAnA = (words) => {
+  return words.some( w => w.includes('a'))
 };
 
 module.exports = {
