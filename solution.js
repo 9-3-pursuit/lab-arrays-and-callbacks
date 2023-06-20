@@ -44,12 +44,15 @@ words.forEach(word => word)
 const arrayValuesSquaredTimesIndex = () =>
 nums.map((num,ind) => num ** 2 * ind)
 
-const arrayWordsUpcased = () => 
+const arrayWordsUpcased = (words) => 
+words.map((word) => word.toUpperCase());
 
 // Some
 
-const areSomeNumsDivisibleBy7 = () =>
-nums.some(num => num * 7)
+  function areSomeNumsDivisibleBy7(nums) {
+  nums.some((num) => num % 7 === 0);
+  }
+  
 
 const doSomeWordsHaveAnA = () => 
 words.some(word => word.includes("a"))
@@ -69,4 +72,4 @@ module.exports = {
   arrayWordsUpcased,
   areSomeNumsDivisibleBy7,
   doSomeWordsHaveAnA,
-};
+}
