@@ -49,9 +49,9 @@ words.map((word) => word.toUpperCase());
 
 // Some
 
-  function areSomeNumsDivisibleBy7(nums) {
+  const areSomeNumsDivisibleBy7 = (nums) =>
   nums.some((num) => num % 7 === 0);
-  }
+  
   
 
 const doSomeWordsHaveAnA = () => 
